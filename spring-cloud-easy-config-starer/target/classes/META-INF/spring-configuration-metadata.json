@@ -1,0 +1,44 @@
+{
+  "groups": [
+    {
+      "name": "spring.cloud.easy-config",
+      "type": "icu.liufuqiang.JdbcConfigProperties",
+      "sourceType": "icu.liufuqiang.JdbcConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.cloud.easy-config.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "icu.liufuqiang.JdbcConfigProperties"
+    },
+    {
+      "name": "spring.cloud.easy-config.enabled",
+      "type": "java.lang.Boolean",
+      "description": "enable easy config.",
+      "defaultValue": "true"
+    },
+    {
+      "name": "spring.cloud.easy-config.password",
+      "type": "java.lang.String",
+      "description": "password",
+      "sourceType": "icu.liufuqiang.JdbcConfigProperties",
+      "defaultValue": "root"
+    },
+    {
+      "name": "spring.cloud.easy-config.url",
+      "type": "java.lang.String",
+      "description": "the jdbc url.",
+      "sourceType": "icu.liufuqiang.JdbcConfigProperties",
+      "defaultValue": "${spring.cloud.easy-config.url}"
+    },
+    {
+      "name": "spring.cloud.easy-config.username",
+      "type": "java.lang.String",
+      "description": "username",
+      "sourceType": "icu.liufuqiang.JdbcConfigProperties",
+      "defaultValue": "root"
+    }
+  ],
+  "hints": []
+}

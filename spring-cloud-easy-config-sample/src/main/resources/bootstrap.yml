@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    easy-config:
+      enabled: true
+      url: jdbc:mysql://localhost:3306/config?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
