@@ -3,6 +3,7 @@ package icu.liufuqiang.cache;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.StrUtil;
+import icu.liufuqiang.config.GlobalConfig;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,7 +25,8 @@ public class LocalFileCache {
 	}
 
 	public static void saveSnapshotFile(String dataId, String content) {
-		File file = new File(LOCAL_SNAPSHOT_PATH + File.separator + dataId + ".yaml");
+		String fileName = StrUtil.nullToDefault(GlobalConfig.getApplicationName(), "") + dataId + ".yaml";
+		File file = new File(LOCAL_SNAPSHOT_PATH + File.separator + fileName);
 		if (StrUtil.isBlank(content)) {
 			file.delete();
 		}
@@ -32,7 +34,8 @@ public class LocalFileCache {
 	}
 
 	public static File getSnapshotFileString(String dataId) {
-		return new File(LOCAL_SNAPSHOT_PATH + File.separator + dataId + ".yaml");
+		String fileName = StrUtil.nullToDefault(GlobalConfig.getApplicationName(), "") + dataId + ".yaml";
+		return new File(LOCAL_SNAPSHOT_PATH + File.separator + fileName);
 	}
 
 	public static String getContentFromDisk(String dataId) {

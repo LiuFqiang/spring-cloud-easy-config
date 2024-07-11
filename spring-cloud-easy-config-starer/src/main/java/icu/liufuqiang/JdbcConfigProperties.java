@@ -11,13 +11,15 @@ public class JdbcConfigProperties {
 
 	public static final String PREFIX = "spring.cloud.easy-config";
 
-	public String url;
+	private String url;
 
-	public String username;
+	private String username;
 
-	public String password;
+	private String password;
 
-	public String driverClassName;
+	private String driverClassName;
+
+	private String dataId;
 
 	public String getUrl() {
 		return url;
@@ -51,4 +53,11 @@ public class JdbcConfigProperties {
 		this.driverClassName = driverClassName;
 	}
 
+	public String getDataId() {
+		return dataId;
+	}
+
+	public void setDataId(String dataId) {
+		this.dataId = dataId;
+	}
 }

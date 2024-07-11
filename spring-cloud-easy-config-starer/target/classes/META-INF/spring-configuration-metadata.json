@@ -8,6 +8,11 @@
   ],
   "properties": [
     {
+      "name": "spring.cloud.easy-config.data-id",
+      "type": "java.lang.String",
+      "sourceType": "icu.liufuqiang.JdbcConfigProperties"
+    },
+    {
       "name": "spring.cloud.easy-config.driver-class-name",
       "type": "java.lang.String",
       "sourceType": "icu.liufuqiang.JdbcConfigProperties"

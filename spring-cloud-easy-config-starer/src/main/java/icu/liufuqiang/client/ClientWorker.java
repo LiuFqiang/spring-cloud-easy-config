@@ -27,7 +27,7 @@ public class ClientWorker {
 	private Map<String, CacheData> cacheMap = new ConcurrentHashMap<>();
 
 	public ClientWorker() {
-		executor = Executors.newScheduledThreadPool(10, r -> {
+		executor = Executors.newScheduledThreadPool(1, r -> {
 			Thread t = new Thread(r);
 			t.setName("jdbc-config-thread");
 			t.setDaemon(true);

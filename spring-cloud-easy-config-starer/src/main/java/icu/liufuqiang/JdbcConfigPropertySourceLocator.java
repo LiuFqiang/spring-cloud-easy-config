@@ -1,10 +1,12 @@
 package icu.liufuqiang;
 
+import cn.hutool.core.util.StrUtil;
 import icu.liufuqiang.client.ClientManager;
 import icu.liufuqiang.client.JdbcConfigPropertySourceBuilder;
 import icu.liufuqiang.client.JdbcConfigPropertySource;
 import icu.liufuqiang.config.ConfigFactory;
 import icu.liufuqiang.config.ConfigService;
+import icu.liufuqiang.config.GlobalConfig;
 import org.springframework.cloud.bootstrap.config.PropertySourceLocator;
 import org.springframework.core.env.CompositePropertySource;
 import org.springframework.core.env.Environment;
@@ -35,11 +37,15 @@ public class JdbcConfigPropertySourceLocator implements PropertySourceLocator {
 			configService = ConfigFactory.createConfigService(dataSource);
 		}
 
+		String appName = environment.getProperty("spring.application.name");
+		GlobalConfig.setApplicationName(appName);
+
 		JdbcConfigPropertySourceBuilder builder = new JdbcConfigPropertySourceBuilder(
 				configService, dataSource);
 		CompositePropertySource composite = new CompositePropertySource(
 				"jdbc-config-property-source");
-		JdbcConfigPropertySource propertySource = builder.build("dataId");
+		JdbcConfigPropertySource propertySource =
+				builder.build(StrUtil.nullToDefault(properties.getDataId(), ""));
 		if (propertySource.getSource().isEmpty()) {
 			return composite;
 		}
