@@ -17,8 +17,6 @@
         <java.version>8</java.version>
         <spring-boot-version>2.2.8.RELEASE</spring-boot-version>
         <spring-cloud-version>Hoxton.SR5</spring-cloud-version>
-        <maven.test.skip>true</maven.test.skip>
-        <maven.javadoc.skip>true</maven.javadoc.skip>
     </properties>
 
     <dependencies>

@@ -10,7 +10,7 @@
 <dependency>
     <groupId>icu.liufuqiang</groupId>
     <artifactId>spring-cloud-easy-config-starer</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 ```
 #### 项目配置 bootstrap.yml
