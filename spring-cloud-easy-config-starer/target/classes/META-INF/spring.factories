@@ -1,4 +1,0 @@
-org.springframework.cloud.bootstrap.BootstrapConfiguration=\
-icu.liufuqiang.JdbcConfigBootstrapConfiguration
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-icu.liufuqiang.JdbcConfigAutoConfiguration
