@@ -2,3 +2,8 @@ org.springframework.cloud.bootstrap.BootstrapConfiguration=\
 icu.liufuqiang.JdbcConfigBootstrapConfiguration
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 icu.liufuqiang.JdbcConfigAutoConfiguration
+
+org.springframework.boot.context.config.ConfigDataLoader=\
+  icu.liufuqiang.configdata.JdbcConfigDataLoader
+org.springframework.boot.context.config.ConfigDataLocationResolver=\
+  icu.liufuqiang.configdata.JdbcConfigDataLocationResolver

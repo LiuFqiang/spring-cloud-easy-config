@@ -6,7 +6,7 @@
     <groupId>icu.liufuqiang</groupId>
     <artifactId>spring-cloud-easy-config</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4</version>
     <modules>
         <module>spring-cloud-easy-config-starer</module>
     </modules>

@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.8.RELEASE</version>
+        <version>2.7.9</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>icu.liufuqiang</groupId>
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>icu.liufuqiang</groupId>
             <artifactId>spring-cloud-easy-config-starer</artifactId>
-            <version>0.0.2</version>
+            <version>0.0.4</version>
         </dependency>
 
         <dependency>
