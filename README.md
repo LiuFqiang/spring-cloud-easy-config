@@ -6,11 +6,20 @@
 
 #### 引入方法
 
+springboot版本 < 2.4.0
 ```xml
 <dependency>
     <groupId>icu.liufuqiang</groupId>
     <artifactId>spring-cloud-easy-config-starer</artifactId>
     <version>0.0.2</version>
+</dependency>
+```
+springboot版本 >= 2.4.0
+```xml
+<dependency>
+    <groupId>icu.liufuqiang</groupId>
+    <artifactId>spring-cloud-easy-config-starer</artifactId>
+    <version>0.1.0</version>
 </dependency>
 ```
 #### 项目配置 bootstrap.yml
