@@ -4,12 +4,14 @@ import icu.liufuqiang.JdbcConfigProperties;
 import org.apache.commons.logging.Log;
 import org.springframework.boot.BootstrapRegistry;
 import org.springframework.boot.ConfigurableBootstrapContext;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.context.config.*;
 import org.springframework.boot.context.properties.bind.BindHandler;
 import org.springframework.boot.context.properties.bind.Bindable;
 import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.boot.logging.DeferredLogFactory;
 import org.springframework.core.Ordered;
+import org.springframework.core.PriorityOrdered;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,9 +21,12 @@ import java.util.List;
  * @author liufuqiang
  * @Date 2024-07-30 16:04:49
  */
+@AutoConfigureBefore(StandardConfigDataLocationResolver.class)
 public class JdbcConfigDataLocationResolver implements ConfigDataLocationResolver<JdbcConfigDataResource>, Ordered {
 
     private final Log log;
+
+    private static final String PREFIX = "jdbc";
 
     public JdbcConfigDataLocationResolver(DeferredLogFactory logFactory) {
         this.log = logFactory.getLog(getClass());
@@ -29,7 +34,7 @@ public class JdbcConfigDataLocationResolver implements ConfigDataLocationResolve
 
     @Override
     public boolean isResolvable(ConfigDataLocationResolverContext context, ConfigDataLocation location) {
-        if (!location.hasPrefix("jdbc")) {
+        if (!location.hasPrefix(PREFIX)) {
             return false;
         }
         return context.getBinder().bind("spring.cloud.easy-config.enabled", Boolean.class)
@@ -77,6 +82,6 @@ public class JdbcConfigDataLocationResolver implements ConfigDataLocationResolve
 
     @Override
     public int getOrder() {
-        return Integer.MAX_VALUE;
+        return Ordered.HIGHEST_PRECEDENCE;
     }
 }

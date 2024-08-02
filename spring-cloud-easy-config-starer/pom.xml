@@ -10,7 +10,7 @@
     <groupId>icu.liufuqiang</groupId>
     <artifactId>spring-cloud-easy-config-starer</artifactId>
     <name>spring-cloud-easy-config-starer</name>
-    <version>0.0.4</version>
+    <version>0.1.0</version>
     <url>http://maven.apache.org</url>
     <build>
         <plugins>
@@ -127,23 +127,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- GPG -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <configuration>
-                            <executable>D:\gpg\GnuPG\bin\gpg.exe</executable>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
+
                     <plugin>
                         <groupId>org.sonatype.central</groupId>
                         <artifactId>central-publishing-maven-plugin</artifactId>
