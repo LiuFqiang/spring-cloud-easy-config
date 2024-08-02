@@ -12,6 +12,27 @@
     <name>spring-cloud-easy-config-starer</name>
     <version>0.1.0</version>
     <url>http://maven.apache.org</url>
+    <developers>
+        <developer>
+            <id>liufuqiang</id>
+            <name>木马不是🐎</name>
+            <email>2895911487@qq.com</email>
+            <url>https://www.cnblogs.com/LiuFqiang</url>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <scm>
+        <url>https://gitee.com/LiuFqiang/spring-cloud-easy-config.git</url>
+        <connection>
+            scm:git:git@gitee.com:LiuFqiang/spring-cloud-easy-config.git
+        </connection>
+        <developerConnection>
+            scm:git:ssh://git@gitee.com:LiuFqiang/spring-cloud-easy-config.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <build>
         <plugins>
             <plugin>
